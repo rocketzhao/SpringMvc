@@ -1,0 +1,18 @@
+#specific files#
+.DS_Store
+
+#class files #
+*.class
+SpringMvc/Webapp/WEB-INF/classes/**
+SpringMvc/.settings/**
+
+# Package Files #
+#*.jar
+*.war
+*.ear
+
+#other Files#
+.rar
+.tomcatplugin
+
+
