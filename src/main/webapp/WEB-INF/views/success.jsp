@@ -11,6 +11,8 @@
 	<font color="red">${requestScope.user.name} </font>!
 	<br>
 	<br>
+	
+	<!-- 下面是超链接的两种形式 -->
 	<a href="list">用户信息列表</a><br/><br/>
 	
 	<a href="${pageContext.request.contextPath}/test/controller?id=1">Controller正常错误</a><br/><br/>
