@@ -18,7 +18,6 @@ import com.javahash.spring.domain.User;
 import com.javahash.spring.service.UserService;
 
 @Controller
-@RequestMapping("/user")
 public class UserController extends BaseController {
 
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -26,7 +25,7 @@ public class UserController extends BaseController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping("/login")
+	@RequestMapping("/user/login")
 	public String login(HttpServletRequest request, Model model) {
 		String name = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -43,7 +42,7 @@ public class UserController extends BaseController {
 		}
 	}
 
-	@RequestMapping("/list")
+	@RequestMapping("/user/list")
 	public String getAllUsers(Model model) {
 		List<User> users = userService.getAllUsers();
 		model.addAttribute("users", users);
@@ -51,7 +50,7 @@ public class UserController extends BaseController {
 		return "list";
 	}
 
-	@RequestMapping(value = "/getUserInfo/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/user/getUserInfo/{id}", method = RequestMethod.POST)
 	@ResponseBody
 	public User getUserInfo(HttpServletRequest request, @PathVariable int id) {
 		User user = userService.getUserInfo(id);

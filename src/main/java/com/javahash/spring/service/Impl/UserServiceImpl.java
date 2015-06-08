@@ -16,21 +16,18 @@ public class UserServiceImpl extends BaseServiceImpl implements UserService {
 	@Autowired
 	private UserMapper userMapper;
 	
-	@Override
 	@Transactional
 	public User login(String name, String password) {
 		User user_login = userMapper.login(name, password);
 		return user_login;
 	}
 
-	@Override
 	@Transactional
 	public List<User> getAllUsers() {
 		List<User> users = userMapper.getAllUsers();
 		return users;
 	}
 
-	@Override
 	public User getUserInfo(int id) {
 		User user = userMapper.selectOne(id);
 		return user;

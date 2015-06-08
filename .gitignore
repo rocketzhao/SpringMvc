@@ -16,3 +16,4 @@ SpringMvc/.settings/**
 .tomcatplugin
 
 
+/target/

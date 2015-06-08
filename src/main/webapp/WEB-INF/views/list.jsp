@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>员工列表页面</title>
-	<script src="${pageContext.request.contextPath}/resource/skin/js/jquery-1.7.2.js" type="text/javascript"></script>
+	<script src="resource/skin/js/jquery-1.7.2.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
 		var uri = "${pageContext.request.contextPath}";
